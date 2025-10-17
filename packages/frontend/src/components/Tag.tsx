@@ -19,7 +19,9 @@ export function Tag({ children, useRandomColor = false, className }: Props) {
   // To avoid hydration error, I set the color on mount
   useEffect(() => {
     if (useRandomColor) {
-      setColor(colorsStore[children] || getRandomColor());
+      const color = colorsStore[children] || getRandomColor();
+      colorsStore[children] = color;
+      setColor(color);
     }
   }, [children, useRandomColor]);
 

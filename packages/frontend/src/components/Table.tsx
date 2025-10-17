@@ -396,7 +396,9 @@ export function Table<T>({
             height={128}
             alt="Nothing to show"
           />
-          <p className="text-xl mt-8">{emptyMessage || "No data available"}</p>
+          <p className="text-xl mt-8 dark:text-white">
+            {emptyMessage || "No data available"}
+          </p>
         </div>
       )}
     </div>
