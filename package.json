@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "nuel",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "yarn workspace nuel-backend dev",
+    "dev:frontend": "yarn workspace nuel-frontend dev",
+    "start:backend": "yarn workspace nuel-backend start",
+    "start:frontend": "yarn workspace nuel-frontend start",
+    "dev": "concurrently \"yarn dev:backend\" \"yarn dev:frontend\"",
+    "start": "concurrently \"yarn start:backend\" \"yarn start:frontend\"",
+    "build": "yarn workspace nuel-frontend build && yarn workspace nuel-backend build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
