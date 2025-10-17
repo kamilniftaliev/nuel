@@ -12,7 +12,7 @@
     "start:frontend": "yarn workspace nuel-frontend start",
     "dev": "concurrently \"yarn dev:backend\" \"yarn dev:frontend\"",
     "start": "concurrently \"yarn start:backend\" \"yarn start:frontend\"",
-    "build": "yarn workspace nuel-frontend build && yarn workspace nuel-backend build"
+    "build": "yarn workspace nuel-shared build && yarn workspace nuel-frontend build && yarn workspace nuel-backend build"
   },
   "devDependencies": {
     "concurrently": "^8.0.0"
